@@ -1,0 +1,51 @@
+{
+  "name": "coding-game-spring-challenge-2021",
+  "version": "1.0.0",
+  "description": "https://www.codingame.com/ide/challenge/spring-challenge-2021",
+  "main": "index.ts",
+  "dependencies": {
+    "ts-node": "^9.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^15.0.3",
+    "@typescript-eslint/eslint-plugin": "^4.23.0",
+    "@typescript-eslint/parser": "^4.23.0",
+    "eslint": "^7.26.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-plugin-import": "^2.22.1",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.0",
+    "typescript": "^4.2.4"
+  },
+  "scripts": {
+    "start": "npx ts-node src/index.ts",
+    "test": "test",
+    "format": "prettier --write .",
+    "lint": "tsc --noEmit && eslint \"**/*.ts\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SandrineK/coding-game-spring-challenge-2021.git"
+  },
+  "keywords": [
+    "coding-game",
+    "challenge",
+    "typescript"
+  ],
+  "author": "SandrineK",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SandrineK/coding-game-spring-challenge-2021/issues"
+  },
+  "homepage": "https://github.com/SandrineK/coding-game-spring-challenge-2021#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  }
+}
